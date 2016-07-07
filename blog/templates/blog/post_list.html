@@ -1,4 +1,31 @@
 <html>
-    <p>Hola!</p>
-    <p>Esto funciona!</p>
-</html>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Literature code</title>
+</head>
+<body>    
+    <div>
+        <h1><a href="">Blog:Literature code</a></h1>
+    </div>
+ 
+        <hr>{% for post in posts %}
+            <div>
+                <p>published:{{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+         </hr>
+			<div>
+                <p>published:{{ post.published_date }} </p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+	    
+		
+		</body>
+    </html>
+
+	
